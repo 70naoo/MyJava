@@ -17,7 +17,7 @@ public class Variable1 {
 		
 		
 		String name = "山本直毅";
-		String sex = "男";
+		char sex = '男';
 		int age = 23;
 		double height = 165.5;
 		
