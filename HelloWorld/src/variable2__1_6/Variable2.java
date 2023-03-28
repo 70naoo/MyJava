@@ -38,6 +38,6 @@ public class Variable2 {
 		System.out.println("あなたの年齢を予想します。");
 		Random rand = new java.util.Random();
 	    int randomNumber = rand.nextInt(101);
-	    System.out.println(randomNumber);
+	    System.out.println("あなたの年齢はおそらく" + randomNumber + "歳ですね？");
 	}
 }
