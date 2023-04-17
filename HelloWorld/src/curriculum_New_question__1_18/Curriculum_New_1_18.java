@@ -34,10 +34,10 @@ public class Curriculum_New_1_18{
 	    int[] result = new int[count]; // count個分の整数を格納するための配列
 
 	    for (int i = 0; i < count; i++) { // count回分だけ繰り返す
-	        int randomNumber = random.nextInt(100) + 1; // 100までの乱数を生成にプラス１する
-	        result[i] = randomNumber; 
-	        if (randomNumber != 0) { // 生成した乱数が0でなければという条件
-	            System.out.println(randomNumber); 
+	    	result[i] = random.nextInt(100) + 1; // 100までの乱数を生成にプラス１する
+	      
+	        if (result[i]  != 0) { // 生成した乱数が0でなければという条件
+	            System.out.println(result[i]); 
 	        }
 	    }
 
@@ -63,12 +63,7 @@ public class Curriculum_New_1_18{
 	
 	// Q7：引数にQ6で作成したメソッドの返り値を受け取り、受け取った値が50以上ならばtrueそれ以外はfalseを返しコンソールに出力してください
 
-	 public static boolean checkValue(int[] numbers) {
-	        double sum = 0;
-	        for (int number : numbers) {
-	            sum += number;
-	        }
-	        double average = sum / numbers.length;
+	 public static boolean checkValue(double average) {
 	        if (average >= 50) {
 	        	System.out.println("true");
 	            return true; // 平均値が50以上ならtrue
@@ -94,9 +89,9 @@ public class Curriculum_New_1_18{
 	//問５
 	int[] numbers = generateRandomNumbers(5);
 	//問６
-	calculateAverage(numbers);
+	 double average = calculateAverage(numbers);
 	//問７
-    checkValue(numbers);
+    checkValue(average);
 
 	}
 }
