@@ -6,11 +6,11 @@ public class Dog {
 	// Q2：フィールドに動物の数の変数を定義してください。
 	int count;
 	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
-	Dog(){
-		name = "犬";
+	public Dog(){
+		this.name = "犬";
 	}
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-	Dog(int b){
-		count = b;
+	public Dog(int b){
+		this.count = b;
 	}
 }
