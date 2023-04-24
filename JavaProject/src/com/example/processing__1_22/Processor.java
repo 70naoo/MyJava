@@ -42,7 +42,7 @@
 //    }
 //}
 
-
+//パッケージの命名法則
 package com.example.processing__1_22;
 
 //必要なクラスをインポート
@@ -60,8 +60,8 @@ public class Processor {
     //コンストラクタ
     public Processor() {
         this.location = "日本"; 
-        this.sushi = "この寿司はうまい"; 
-        this.foodType = "寿司は和食です"; 
+        this.sushi = "寿司"; 
+        this.foodType = "和食"; 
         this.currentDateTime = LocalDateTime.now(); 
     }
 
@@ -77,8 +77,8 @@ public class Processor {
         String formattedDateTime = this.currentDateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
 
         System.out.println("こんにちは！ここは" + this.location + "です！");
-        System.out.println(this.sushi);
-        System.out.println(this.foodType);
+        System.out.println("この" + this.sushi + "はうまい");
+        System.out.println(this.sushi + "は" + this.foodType + "です");
         System.out.println("今の現在日時は" + formattedDateTime + "です");
     }
 }

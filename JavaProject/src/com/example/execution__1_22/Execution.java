@@ -1,3 +1,4 @@
+//パッケージの命名法則
 package com.example.execution__1_22;
 
 import com.example.processing__1_22.Processor;
