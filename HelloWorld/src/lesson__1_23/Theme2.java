@@ -52,6 +52,7 @@ public class Theme2 {
 		// TODO 自動生成されたメソッド・スタブ
 //		インスタンス生成
 		Theme2 theme = new Theme2("ライオン",2.1,80) ;
+//		それぞれ出力
 		System.out.println("動物名:" + theme.getName());
 		System.out.println("体長:" + theme.getSecond() + "m");
 		System.out.println("速度:" + theme.getSpeed() + "km/h");
