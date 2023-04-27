@@ -3,11 +3,11 @@ package lesson__1_23;
 public class Bean {
 
 	//メンバ変数
-	public String name;
-	public double second;
-	public int speed;
+	private String name;
+	private double second;
+	private int speed;
 	
-	//名前ゲッター
+	    //名前ゲッター
 			public String getName() {	
 				return name;
 			}
