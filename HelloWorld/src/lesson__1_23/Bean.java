@@ -32,10 +32,8 @@ public class Bean {
 				this.speed = speed;
 			}
     //コンストラクタ
-	public Bean(String name,double second,int speed) {
-		this.name = name;
-		this.second = second;
-		this.speed = speed;
+	public Bean() {
+		
 	}
 		
 }

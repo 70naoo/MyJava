@@ -15,7 +15,11 @@ public class Main {
 
 	public static void main(String[] args) {
         //インスタンス生成
-		Bean bean = new Bean("ライオン",2.1,80) ;
+		Bean bean = new Bean() ;
+		
+		bean.setName("ライオン");
+		bean.setSecond(2.1);
+		bean.setSpeed(80);
 		
         //それぞれ出力
 		System.out.println("動物名:" + bean.getName());
