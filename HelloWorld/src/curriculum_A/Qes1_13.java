@@ -6,58 +6,110 @@ public class Qes1_13 {
 		
     // 1
         //変数の宣言のみする
-		byte a;
-		short b;
-		int c;
-		long d;
-		float e;
-		double f;
-		char g;
-		String h;
-		boolean i;
+		// バイト型
+        byte myByte;
+        
+        // 短整数型
+        short myShort;
+        
+        // 整数型
+        int myInt;
+        
+        // 長整数型
+        long myLong;
+        
+        // 単精度浮動小数点数型
+        float myFloat;
+        
+        // 倍精度浮動小数点数型
+        double myDouble;
+        
+        // 文字型
+        char myChar;
+        
+        // 文字列型
+        String myString;
+        
+        // ブーリアン型
+        boolean myBoolean;
 		
 		   System.out.println("");
 		 
 	 // 2. 初期化
-		a = 0;
-		b = 0;
-		c = 0;
-		d = 0L;
-		e = 0.0f;
-		f = 0.0;
-		g = '\0';
-		h = null;
-	    i = false;
+		// バイト型
+	        myByte = 0;
+	        
+	        // 短整数型
+	        myShort = 0;
+	        
+	        // 整数型
+	        myInt = 0;
+	        
+	        // 長整数型
+	        myLong = 0L;
+	        
+	        // 単精度浮動小数点数型
+	        myFloat = 0.0f;
+	        
+	        // 倍精度浮動小数点数型
+	        myDouble = 0.0;
+	        
+	        // 文字型
+	        myChar = '\u0000';
+	        
+	        // 文字列型
+	        myString = null;
+	        
+	        // ブーリアン型
+	        myBoolean = false;
 
 	        System.out.println("");
     // 3
         // 値を代入する
-		a = 10;
-		b =100;
-		c = 1000;
-		d = 10000;
-		e = 9.5f;
-		f = 10.5d;
-		g = 'a';
-		h = "ハロー";
-		i = true;
+	     // バイト型
+	       myByte = 10;
+	        
+	        // 短整数型
+	        myShort = 100;
+	        
+	        // 整数型
+	        myInt = 1000;
+	        
+	        // 長整数型
+	        myLong = 10000L;
+	        
+	        // 単精度浮動小数点数型
+	        myFloat = 9.5f;
+	        
+	        // 倍精度浮動小数点数型
+	        myDouble = 10.5;
+	        
+	        // 文字型
+	        myChar = 'a';
+	        
+	        // 文字列型
+	        myString = "ハロー";
+	        
+	        // ブーリアン型
+	        myBoolean = true;
 		
 		   System.out.println("");
 		
     // 4
         // コンソールに出力する
-		System.out.println(d + c + b + a);
-		System.out.println(a + a);
-		System.out.println(g + " " + h + " " + i);
-		System.out.println(f + e + d + c + b + a);
-		System.out.println(d * c * b * a);
-		System.out.println(f / b);
-		System.out.println(a - b);
+		System.out.println(myLong + myInt + myShort + myByte);
+		System.out.println(myByte + myByte);
+		System.out.println(myChar+ " " + myString + " " + myBoolean);
+		System.out.println(myDouble + myFloat + myLong + myInt + myShort + myByte);
+		System.out.println(myLong * myInt * myShort * myByte);
+		System.out.println(myDouble / myShort);
+		System.out.println(myByte - myShort);
 		
 		   System.out.println("");
 		
 	// 5
 		// コンソールに出力する
+         //String型をint型に修正
 		int num=20;
 		int num1=23;
 		System.out.println("ハローJAVA" +(num + num1));
@@ -83,7 +135,7 @@ public class Qes1_13 {
      // 7
 		// BMIを出力する
 		double bmi = weight / ((height / 100) * (height / 100));
-		System.out.println("BMIは" + bmi + "です");
+		System.out.println("BMIは" + String.format("%.1f", bmi) + "です");
 		
 		   System.out.println("");
 		
@@ -102,28 +154,36 @@ public class Qes1_13 {
 		System.out.println("体重は" + weight + " kgです");
 		System.out.println("好きな食べ物は" + food + "です");
 		bmi = weight / ((height / 100) * (height / 100));
-		System.out.println("BMIは" + bmi + "です");
+		System.out.println("BMIは" +String.format("%.1f", bmi)  + "です");
 		
 		   System.out.println("");
 		
      // 9
 		// 自己代入する
-		int age1 = age + age; 
-		double height1 = height + height; 
-		double weight1 = weight + weight; 
+		age += age; 
+		height += height; 
+		weight += weight; 
 		
 		// コンソールに出力する
 		System.out.println("初めまして" + name + "です");
-		System.out.println("年齢は" + age1 + "歳です");
-		System.out.println("身長は" + height1 + "cmです");
-		System.out.println("体重は" + weight1 + " kgです");
+		System.out.println("年齢は" + age + "歳です");
+		System.out.println("身長は" + height + "cmです");
+		System.out.println("体重は" + weight + " kgです");
 		System.out.println("好きな食べ物は" + food + "です");
 		bmi = weight / ((height / 100) * (height / 100));
-		System.out.println("BMIは" + bmi + "です");
+		System.out.println("BMIは" + String.format("%.2f", bmi) + "です");
 		
 		   System.out.println("");
 		
      // 10
+		   
+		// 8で使用した変数を使う
+			name = "鈴木一郎";
+			age = 24;
+			height = 168.5;
+			weight = 64.2;
+			food = "オムライス";
+			
 		 // if文なしでtrue表示する
 		boolean over25 = age >= 25 ? true : false;
 		System.out.println(over25);
@@ -133,7 +193,7 @@ public class Qes1_13 {
      // 11
 		 // 整数型や短整数型を文字列型にする  
 		String ageStr = String.valueOf(age);
-		String heightStr = String.valueOf((int)height);
+		String heightStr = String.valueOf(height);
 		String weightStr = String.valueOf(weight);
 		System.out.println(ageStr + " " + heightStr + " " + weightStr);
 		
@@ -142,14 +202,14 @@ public class Qes1_13 {
      // 12
 		// 文字列型を整数型にする
 		int ageInt = Integer.parseInt(ageStr);
-		int heightInt = Integer.parseInt(heightStr);
-		System.out.println(ageInt + heightInt);
+		int heightInt =(int)height;
+		System.out.println(ageInt +" "+ heightInt);
 		
 		   System.out.println("");
 		   
      // 13 
 		// if文なしでtrue表示する
-		boolean ageHeight = age >= 25 && height >= 160 ? true : false;
+		boolean ageHeight = age == 25 && height >= 160 ? true : false;
 		System.out.println(ageHeight);
 		
 	}
