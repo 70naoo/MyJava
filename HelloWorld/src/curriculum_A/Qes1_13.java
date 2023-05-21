@@ -202,7 +202,10 @@ public class Qes1_13 {
      // 12
 		// 文字列型を整数型にする
 		int ageInt = Integer.parseInt(ageStr);
-		int heightInt =(int)height;
+		// 11で作成した文字列型を一度、double型に変換する
+		double heightDouble = Double.parseDouble(heightStr);
+		// double型 → int型に変換する
+		int heightInt =(int)heightDouble;
 		System.out.println(ageInt +" "+ heightInt);
 		
 		   System.out.println("");
