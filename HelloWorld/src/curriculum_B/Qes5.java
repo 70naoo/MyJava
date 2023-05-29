@@ -1,3 +1,5 @@
+// 5 for文を使用して下記の通りに出力してください
+
 package curriculum_B;
 
 public class Qes5 {
