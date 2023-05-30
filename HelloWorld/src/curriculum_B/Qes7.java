@@ -44,13 +44,16 @@ public class Qes7 {
 
 		// それぞれの教科を配列に格納する
 		String[] subject = { "英語", "数学", "理科", "社会" };
+		
 		// 生徒の数ごとにfor文を回す
 		for (int i = 0; i < number; i++) {
+			
 			// 教科ごとにfor文を回す。
 			for (int j = 0; j < 4; j++) {
 				System.out.print((i + 1) + "人目の" + subject[j] + "の点数を記入してください：");
 				score[i][j] = scan.nextInt();
 			}
+			
 			//	1人ずつ一行開ける。
 			System.out.println("");
 		}
@@ -85,6 +88,7 @@ public class Qes7 {
 			System.out.printf("%sの平均点は%.2f点です。\n", subject[i], subjectAverage[i]);
 			totalAverage += subjectAverage[i] / 4;
 		}
+		
 		// 全体の平均点を出力する
 		System.out.printf("全体の平均点は%.2f点です。\n", totalAverage);
 		scan.close();

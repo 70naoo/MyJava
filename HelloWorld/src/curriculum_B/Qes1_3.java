@@ -45,34 +45,51 @@ import java.util.Scanner;
 
 public class Qes1_3 {
 	public static void main(String[] args) {
+		
 		// インスタンスを生成する
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
 
 		// ユーザー名を買うのうするための配列を作成する
 		String username = null;
+		
 		// フラグ処理をする
 		boolean usernameOK = false;
 
 		// 正しいユーザー名が記入されるまでループする
 		while (!usernameOK) {
+			
 			System.out.print("ユーザー名を入力してください: ");
+			
 			username = scan.nextLine();
+			
+			System.out.println("");
+			
 			// nullか空白なら記入し直ししてもらう
 			if (Objects.isNull(username) || username.isEmpty()) {
+				
 				System.out.println("名前を入力してください");
+				
 				// 半角英数字のみではなかった場合記入し直してもらう
 			} else if (!username.matches("[a-zA-Z0-9]+")) {
+				
 				System.out.println("半角英数字のみで名前を入力してください");
+				
 				// 10字より大きかった場合記入し直してもらう
 			} else if (username.length() > 10) {
+				
 				System.out.println("名前を10文字以内にしてください");
+				
 				// 条件を満たせばループを抜けてもらう
 			} else {
+				
 				usernameOK = true;
 			}
 		}
+		
 		System.out.println("ユーザー名「" + username + "」を登録しました");
+		
+		System.out.println("");
 
 		// じゃんけん
 		int count = 0;
@@ -81,6 +98,7 @@ public class Qes1_3 {
 
 		// 買った場合以外はループを続ける
 		while (result != -1) {
+			
 			// ユーザーの手を入力してもらう
 			System.out.print(username + "の手を選んでください（0: グー, 1: チョキ, 2: パー）: ");
 			int userHand = scan.nextInt();
@@ -105,22 +123,48 @@ public class Qes1_3 {
 
 			// 結果によって場合分する
 			if (result == 0) {
+				
 				System.out.println("DRAW あいこ もう一回しましょう！");
+				
+				System.out.println("");
+				
 			} else if (result == 1) {
+				
 				System.out.println("俺の勝ち！");
+				
+				System.out.println("");
+				
 				if (pcHand == 0) {
+					
 					System.out.println("負けは次につながるチャンスです！");
+					
+					System.out.println("");
+					
 				} else if (pcHand == 1) {
+					
 					System.out.println("たかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ");
+					
+					System.out.println("");
+					
 				} else {
+					
 					System.out.println("なんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです");
+					
+					System.out.println("");
+					
 				}
+				
 			} else {
+				
 				System.out.println("やるやん。次は俺にリベンジさせて");
+				
+				System.out.println("");
+				
 				break;
 			}
 
 		}
+		
 		// かかった回数を表示する
 		System.out.println("勝つまでにかかった回数: " + count);
 		scan.close();
