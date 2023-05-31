@@ -54,8 +54,8 @@ public class Qes7 {
 				score[i][j] = scan.nextInt();
 			}
 			
-			//	1人ずつ一行開ける。
-			System.out.println("");
+			System.out.println("\n");
+			
 		}
 
 		//	それぞれの人の平均点と教科ごとの平均を出す。
@@ -81,16 +81,16 @@ public class Qes7 {
 		}
 		for (int i = 0; i < number; i++) {
 			// 各生徒の平均点を出力する
-			System.out.printf("%d人目の平均点は%.2f点です。\n", (i + 1), studentAverage[i]);
+			System.out.printf("\n%d人目の平均点は%.2f点です。\n", (i + 1), studentAverage[i]);
 		}
 		for (int i = 0; i < 4; i++) {
 			// 各科目の平均点を出力する
-			System.out.printf("%sの平均点は%.2f点です。\n", subject[i], subjectAverage[i]);
+			System.out.printf("\n%sの平均点は%.2f点です。\n", subject[i], subjectAverage[i]);
 			totalAverage += subjectAverage[i] / 4;
 		}
 		
 		// 全体の平均点を出力する
-		System.out.printf("全体の平均点は%.2f点です。\n", totalAverage);
+		System.out.printf("\n全体の平均点は%.2f点です。\n", totalAverage);
 		scan.close();
 	}
 

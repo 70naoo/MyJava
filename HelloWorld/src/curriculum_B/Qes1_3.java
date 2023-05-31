@@ -124,41 +124,29 @@ public class Qes1_3 {
 			// 結果によって場合分する
 			if (result == 0) {
 				
-				System.out.println("DRAW あいこ もう一回しましょう！");
-				
-				System.out.println("");
+				System.out.println("\nDRAW あいこ もう一回しましょう！\n");
 				
 			} else if (result == 1) {
 				
-				System.out.println("俺の勝ち！");
-				
-				System.out.println("");
+				System.out.println("\n俺の勝ち！");
 				
 				if (pcHand == 0) {
 					
 					System.out.println("負けは次につながるチャンスです！");
 					
-					System.out.println("");
-					
 				} else if (pcHand == 1) {
 					
-					System.out.println("たかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ");
-					
-					System.out.println("");
-					
+					System.out.println("たかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ\n");
+
 				} else {
 					
-					System.out.println("なんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです");
-					
-					System.out.println("");
+					System.out.println("なんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです\n");
 					
 				}
 				
 			} else {
 				
-				System.out.println("やるやん。次は俺にリベンジさせて");
-				
-				System.out.println("");
+				System.out.println("\nやるやん。次は俺にリベンジさせて\n");
 				
 				break;
 			}

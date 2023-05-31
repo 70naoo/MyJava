@@ -17,16 +17,13 @@ import java.util.Scanner;
 public class Qes6 {
 
 	public static void main(String[] args) {
-		// インスタンスを生成する
+		
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
 
 		// コンソールに入力された値をうけとる
 		//  、で区切って複数な値を格納する
 		String[] items = scan.next().split("、");
-		
-		// 改行する
-		System.out.println("");
 
 		// 配列itemsに格納されたものを一つずつ取り出してfor文を回す
 		for (String item : items) {
@@ -46,9 +43,7 @@ public class Qes6 {
 
 			case "加湿器":
 				
-				System.out.println(item + "の残り台数は" + bai + "台です。");
-				
-				System.out.println("");
+				System.out.println(item + "の残り台数は" + bai + "台です。\n");
 				
 				break;
 				
@@ -58,16 +53,14 @@ public class Qes6 {
 				// テレビとディスプレイの数は条件演算子を使って、出力される値を変更する。
 				bai = item.equals("テレビ") ? rand.nextInt(12) : bai;
 				
-				System.out.println(item + "の残り台数は" + bai + "台です。");
-				
-				System.out.println("");
-				
+				System.out.println(item + "の残り台数は" + bai + "台です。\n");
+
 				break;
 				
 			// それ以外の商品を選択された時
 			default:
 				
-				System.out.println("『" + item + "』" + "は指定の商品ではございません。");
+				System.out.println("『" + item + "』" + "は指定の商品ではございません。\n");
 				
 				break;
 			}
