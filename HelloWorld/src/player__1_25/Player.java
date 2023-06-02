@@ -37,5 +37,9 @@ public class Player extends bean{
     public void setName(String name) {
         this.name = name;
     } 
+    
+    public String toString() {
+    	return "こんにちは 「" + this.name + "」 さん\nステータス\n" + super.toString();
+    }
 	
 }

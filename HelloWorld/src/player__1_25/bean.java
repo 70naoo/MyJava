@@ -74,4 +74,9 @@ public class bean {
     public void setDefense(int defense) {
         this.defense = defense;
     }
+    
+    public String toString() {
+    	return "HP:" + this.hp + "\nMP:" + this.mp + "\n攻撃カ:" + this.attack + "\n素早さ：" + 
+    	this.speed + "\n防御力:" + this.defense + "\n\nさあ冒険に出かけよう！";
+    }
 }

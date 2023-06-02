@@ -27,7 +27,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 import player__1_25.Player;
-import player__1_25.bean;
 
 public class Main {
 
@@ -37,8 +36,6 @@ public class Main {
 		Random rand = new Random();
 		
 		Scanner scan = new Scanner(System.in);
-		
-		bean be = new bean();
 		
 		Player player = new Player();
 		
@@ -58,21 +55,13 @@ public class Main {
 		player.setName(str);
 		
 		// それぞれのステータスに値を設定する
-		be.setHp(result[0]);
-		be.setMp(result[1]);
-		be.setAttack(result[2]);
-		be.setSpeed(result[3]);
-		be.setDefense(result[4]);
-		
-	        // 出力する
-	        System.out.println("こんにちは「 " + player.getName() + " さん");
-	        System.out.println("ステータス");
-	        System.out.println("HP：" + be.getHp());
-	        System.out.println("MP：" + be.getMp());
-	        System.out.println("攻撃力：" + be.getAttack());
-	        System.out.println("素早さ：" + be.getSpeed());
-	        System.out.println("防御力：" + be.getDefense() + "\n");
-	        System.out.println("さあ冒険に出かけよう！");
+		player.setHp(result[0]);
+		player.setMp(result[1]);
+		player.setAttack(result[2]);
+		player.setSpeed(result[3]);
+		player.setDefense(result[4]);
+
+		System.out.println(player);
 	    
 	}
 
