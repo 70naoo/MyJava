@@ -43,66 +43,125 @@ package lesson__1_26_28;
 
 import java.util.Scanner;
 
-public class Theme2 {
+class Animal {
+	
+	// メンバ変数
+    private String name;
+    private double length;
+    private int speed;
+    private String scientificName;
 
-	public static void main(String[] args) {
+    // 取得して設定
+    public String getName() {
+        return name;
+    }
 
-		//	インスタンス生成
-		Scanner scan = new Scanner(System.in);
+    public void setName(String name) {
+        this.name = name;
+    }
 
-		System.out.println("コンソールに文字を入力してください");
-		
-		//  、で区切って複数な値を格納する
-		String[] names = scan.next().split("、");
-		
-		scan.close();
+    public double getLength() {
+        return length;
+    }
 
-		// 記入した動物を、で区切って一つずつfor文を回す
-		for (String name : names) {
-			switch (name) {
-			
-			case "ライオン":
-				System.out.println("動物名:ライオン");
-				System.out.println("体長:2.1m");
-				System.out.println("速度:80m");
-				System.out.println("学名:パンテラ レオ\n");
-				break;
-				
-			case "ゾウ":
-				System.out.println("動物名:ゾウ");
-				System.out.println("体長:3.2m");
-				System.out.println("速度:40m");
-				System.out.println("学名:ロキソドンタ・サイクロティスオ\n");
-				break;
-				
-			case "パンダ":
-				System.out.println("動物名:パンダ");
-				System.out.println("体長:1.9m");
-				System.out.println("速度:30m");
-				System.out.println("学名:アイルロポダ・メラノレウカ\n");
-				break;
-				
-			case "チンパンジー":
-				System.out.println("動物名:チンパンジー");
-				System.out.println("体長:0.94m");
-				System.out.println("速度:25m");
-				System.out.println("学名:パン・トゥログロディテス\n");
-				break;
-				
-			case "シマウマ":
-				System.out.println("動物名:シマウマ");
-				System.out.println("体長:2.4m");
-				System.out.println("速度:65m");
-				System.out.println("学名:チャップマンシマウマ\n");
-				break;
-				
-			case "インコ":
-				System.out.println("動物名:インコ");
-				System.out.println("体長:0.1m");
-				System.out.println("速度:50m");
-				System.out.println("学名:不明\n");
-				break;
-			}
-		}
-	}
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public String getScientificName() {
+        return scientificName;
+    }
+
+    public void setScientificName(String scientificName) {
+        this.scientificName = scientificName;
+    }
+
+    @Override
+    public String toString() {
+        return "動物名：" + name + "\n体長：" + length + "m\n速度：" + speed + "km/h\n学名：" + scientificName + "\n";
+    }
 }
+
+
+public class Theme2 {
+    public static void main(String[] args) {
+    	
+    	// インスタンスを生成
+        Scanner scanner = new Scanner(System.in);
+
+        
+        // 入力してもらう
+        System.out.println("コンソールに文字を入力してください");
+        String animalData = scanner.nextLine();
+
+        // 入力されたものを,で区切って区別する
+        String[] animalInfo = animalData.split(",");
+
+        // ,で区切ったそれぞれをfor文で回す
+        for (String info : animalInfo) {
+        	
+        	// : で分割された一つずつの取得する
+            String[] animal = info.split(":");
+            
+            String name = animal[0];
+            
+            double length = Double.parseDouble(animal[1]);
+            
+            int speed = Integer.parseInt(animal[2]);
+            
+            String scientificName = getScientificName(name);
+
+            // Animalオブジェクトを作成する
+            Animal newAnimal = new Animal();
+            
+            // それぞれに値を設定する
+            newAnimal.setName(name);
+            
+            newAnimal.setLength(length);
+            
+            newAnimal.setSpeed(speed);
+            
+            newAnimal.setScientificName(scientificName);
+
+            System.out.println(newAnimal);
+        }
+
+        scanner.close();
+    }
+
+    // 学名を取得する
+    public static String getScientificName(String animalName) {
+    	
+        switch (animalName) {
+        
+            case "ライオン":
+                return "パンテラ レオ";
+                
+            case "ゾウ":
+                return "ロキソドンタ・サイクロティス";
+                
+            case "パンダ":
+                return "アイルロポダ・メラノレウカ";
+                
+            case "チンパンジー":
+                return "パン・トゥログロディテス";
+                
+            case "シマウマ":
+                return "チャップマンシマウマ";
+                
+            default:
+                return "不明";
+        }
+    }
+}
+
+
+
