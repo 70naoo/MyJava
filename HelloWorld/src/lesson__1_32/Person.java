@@ -1,5 +1,6 @@
 package lesson__1_32;
 
+
 class Person {
 	// インスタンスフィールドを設定する
 	public String name;
