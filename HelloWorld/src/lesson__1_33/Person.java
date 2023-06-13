@@ -1,5 +1,6 @@
 package lesson__1_33;
 
+
 class Person {
 	
 	// インスタンスフィールドを設定する

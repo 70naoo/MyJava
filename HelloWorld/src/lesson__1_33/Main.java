@@ -15,6 +15,7 @@ class Main {
 		// メソッドを呼び出す
 		person2.print();
 
+		// クラスメソッドを呼び出す
 		Person.printCount();
 	}
 }
