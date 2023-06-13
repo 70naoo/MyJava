@@ -2,6 +2,7 @@ package lesson__1_33;
 
 class Person {
 	
+	// インスタンスフィールドを設定する
 	public static int count = 0;
 	
 	public String firstName;
@@ -14,6 +15,7 @@ class Person {
 	public String lastName;
 	
 	// 問題2：lastNameの値を引数で受け取るコンストラクタを追加で定義してください
+	// コンストラクタを定義する
 	Person(String firstName, String lastName, int age, double height, double weight) {
 		
 		this.firstName = firstName;
@@ -31,12 +33,14 @@ class Person {
 	    
 	  }
 
+	// fullnameメソッドを作成する
 	public String fullName() {
 		
 		return this.firstName + this.lastName;
 		
 	}
 
+	// printメソッドを作成する
 	public void print() {
 		
 		System.out.println("名前は" + this.fullName() + "です");
@@ -45,12 +49,14 @@ class Person {
 		
 	}
 
+	// bmiメソッドを作成する
 	public double bmi() {
 		
 		return this.weight / this.height / this.height;
 		
 	}
 
+	// printCountメソッドを作成する
 	public static void printCount() {
 		
 		System.out.println("合計" + Person.count + "人です");
